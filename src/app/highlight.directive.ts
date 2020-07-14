@@ -28,7 +28,7 @@ export class HighlightDirective implements OnInit {
 
     const span = HTMLSpanElement = this.renderer.createElement('span');
     span.textContent = 'Estoy dentro del elemento co na la directiva';
-    
+
     const container = this.el.nativeElement.querySelector('div');
     if ( container ){
       this.renderer.appendChild(container, span);

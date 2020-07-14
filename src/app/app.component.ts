@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Viaje } from './models/viaje';
+import { Viaje, ViajeEstado } from './models/viaje';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,8 @@ export class AppComponent {
       tipoViaje: 'Safari',
       destinoViaje: 'Kenia',
       duracionViaje: 10,
-      visible: false
+      visible: false,
+      estado: 1
     });
 
     this.viajes.push({
@@ -26,7 +27,8 @@ export class AppComponent {
       tipoViaje: 'Aventura',
       destinoViaje: 'Nepal',
       duracionViaje: 22,
-      visible: true
+      visible: true,
+      estado: 3
     });
 
     // const viaje = new Viaje();
@@ -41,7 +43,8 @@ export class AppComponent {
       tipoViaje: 'Crucero',
       destinoViaje: 'Europa',
       duracionViaje: 15,
-      visible: true
+      visible: true,
+      estado: 4
     });
 
   }
