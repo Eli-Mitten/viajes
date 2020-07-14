@@ -1,0 +1,12 @@
+<div class="container" >
+    <div [appHighlight]="'green'"><h1>{{viaje.nombreDelViaje}}</h1></div>
+
+    <!-- <app-viaje-linea-detalle [appHighlight]="'green'" [clave]="'Nombre del viaje: '" [valor]="viaje.nombreDelViaje"></app-viaje-linea-detalle> -->
+    <app-viaje-linea-detalle appHighlight [color]="'blue'" [clave]="'Tipo de viaje:  '" [valor]="viaje.tipoViaje"></app-viaje-linea-detalle>
+    <app-viaje-linea-detalle appHighlight [clave]="'Destino de viaje: '" [valor]="viaje.destinoViaje"></app-viaje-linea-detalle>
+    <app-viaje-linea-detalle appHighlight [clave]="'Duracion de viaje: '" [valor]="viaje.duracionViaje ? viaje.duracionViaje + ' días' : ''"></app-viaje-linea-detalle>
+    <button (click)="ocultarViaje()">Ocultar viaje</button>
+    <button (click)="monstrarViajeClick()">Mostrar Info</button>
+    <button (dblclick)="mostrarDuracionDobleClick()">Mostrar duracion</button>
+</div>
+

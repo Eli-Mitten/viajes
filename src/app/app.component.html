@@ -1,0 +1,17 @@
+<div class="main-container">
+  <!-- ng-contaien da un contenedor que no altera la estructura -->
+  <ng-container *ngFor="let item of viajes">
+    
+    <app-viaje-detalle *ngIf="item.visible"
+      [viaje]="item"
+        (monstrarViaje)="mostrarInfo($event)"
+        (mostrarDuracion)="alertViajeDuracion($event)">
+    </app-viaje-detalle>
+
+    <button (click)="visiblidadViaje(item)">Ocultar/mostrar</button>
+
+  </ng-container>
+
+  <button (click)="btnViajesClicked()">Numero de viajes</button>
+  <button (click)="verDuracionTotal()">Duración Total</button>
+</div>
