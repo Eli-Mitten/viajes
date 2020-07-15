@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Viaje } from '../models/viaje';
+import { Viaje, ViajeEstado } from '../models/viaje';
 
 @Component({
   selector: 'app-viaje-detalle',
@@ -13,11 +13,15 @@ export class ViajeDetalleComponent implements OnInit {
   // @Input() destinoViaje: string;
   // @Input() duracionViaje: number;
 
+  ViajeEstado = ViajeEstado;
+
   @Input() viaje: Viaje;
+
 
   @Output() monstrarViaje = new EventEmitter<string>(false);
   @Output() mostrarDuracion = new EventEmitter<number>(false); // mostrarDuracion usada en padre
 
+  opciones = ['Categoría Prime', 'Categoría Economica', 'Categoría media', 'Categoría Superior'];
   constructor() {
   }
 
@@ -36,5 +40,10 @@ export class ViajeDetalleComponent implements OnInit {
 
   ocultarViaje(): void {
     this.viaje.visible = !this.viaje.visible;
+  }
+
+  textChanged(text: string): void {
+    console.log(text);
+    this.viaje.tipoViaje = text;
   }
 }

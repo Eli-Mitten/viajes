@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-selectable{
+    border: 1px solid gray;
+    background-color: gainsboro;
+    
+
+    ul{
+        list-style-type: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top:  5px;
+        margin-bottom: 5px;
+
+        li{
+            cursor: pointer;
+            margin-bottom: 5px;
+            padding-left: 5px;
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+}

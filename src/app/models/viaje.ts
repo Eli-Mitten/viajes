@@ -12,7 +12,7 @@ export interface Viaje {
     duracionViaje: number;
     plazas?: number; // no obliga a que tenga esta propiedad
     visible: boolean;
-    estado?: ViajeEstado;
+    estado: ViajeEstado;
 }
 
 // export class Viaje {

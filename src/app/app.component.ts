@@ -10,16 +10,17 @@ export class AppComponent {
 
   viajes: Viaje[] = [];
   duracionTotal: number = null;
+  tiposDeViajes = [];
 
   constructor() {
 
     this.viajes.push({
-      nombreDelViaje: 'Safair por Kenia',
+      nombreDelViaje: 'Safari por Kenia',
       tipoViaje: 'Safari',
       destinoViaje: 'Kenia',
       duracionViaje: 10,
-      visible: false,
-      estado: 1
+      visible: true,
+      estado: ViajeEstado.Abierto
     });
 
     this.viajes.push({
@@ -28,7 +29,7 @@ export class AppComponent {
       destinoViaje: 'Nepal',
       duracionViaje: 22,
       visible: true,
-      estado: 3
+      estado: ViajeEstado.Cancelado
     });
 
     // const viaje = new Viaje();
@@ -44,9 +45,10 @@ export class AppComponent {
       destinoViaje: 'Europa',
       duracionViaje: 15,
       visible: true,
-      estado: 4
+      estado: ViajeEstado.Cerrado
     });
 
+    this.tiposDeViajes = this.viajes.map(x => x.tipoViaje);
   }
 
   // tslint:disable-next-line: typedef
