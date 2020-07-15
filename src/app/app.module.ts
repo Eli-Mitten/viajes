@@ -6,6 +6,7 @@ import { ViajeDetalleComponent } from './viaje-detalle/viaje-detalle.component';
 import { ViajeLineaDetalleComponent } from './viaje-detalle/viaje-linea-detalle/viaje-linea-detalle.component';
 import { HighlightDirective } from './highlight.directive';
 import { ResaltarEstadoDirective } from './directiv/resaltar-estado.directive';
+import { SelectableDirective } from './directiv/selectable.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ResaltarEstadoDirective } from './directiv/resaltar-estado.directive';
     ViajeDetalleComponent,
     ViajeLineaDetalleComponent,
     HighlightDirective,
-    ResaltarEstadoDirective
+    ResaltarEstadoDirective,
+    SelectableDirective
   ],
   imports: [
     BrowserModule
